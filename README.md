@@ -1,2 +1,2 @@
 # Explore countries in 3D 😍
-More details coming soon
+More details coming soon...
