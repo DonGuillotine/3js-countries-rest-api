@@ -35,7 +35,7 @@ var uSpeed = 0.001;
 
 //----------------------------------------------------------------- FOG background
 
-var setcolor = 0xF02050;
+var setcolor = 0x004dff;
 //var setcolor = 0xF2F111;
 //var setcolor = 0xFF6347;
 
