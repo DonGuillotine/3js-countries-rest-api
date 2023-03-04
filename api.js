@@ -246,8 +246,4 @@ function closeBoxModel() {
   boxModelWrapper.classList.remove("show");
 }
 
-function openBoxModel() {
-  boxModelWrapper.classList.add("show");
-}
-
 
