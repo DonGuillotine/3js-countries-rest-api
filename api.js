@@ -225,11 +225,4 @@ dropDownBodyOptions.forEach((option) => {
   });
 });
 
-/* 
-  Functions Only For Codepen
-*/
-let boxModelWrapper = document.querySelector(".box-model-wrapper"),
-  boxModelButtons = boxModelWrapper.querySelectorAll(".box-model .btn"),
-  boxModelCloseBtn = boxModelWrapper.querySelector(".model-close");
-
 
