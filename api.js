@@ -232,14 +232,4 @@ let boxModelWrapper = document.querySelector(".box-model-wrapper"),
   boxModelButtons = boxModelWrapper.querySelectorAll(".box-model .btn"),
   boxModelCloseBtn = boxModelWrapper.querySelector(".model-close");
 
-// Guide User To See The Full Project [multipages] On Guithub Pages
-function seeFullProject(arrayOfLinks) {
-  arrayOfLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      e.preventDefault();
-      openBoxModel();
-    });
-  });
-}
-
 
