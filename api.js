@@ -242,8 +242,4 @@ function seeFullProject(arrayOfLinks) {
   });
 }
 
-function closeBoxModel() {
-  boxModelWrapper.classList.remove("show");
-}
-
 
