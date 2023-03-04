@@ -250,8 +250,4 @@ function openBoxModel() {
   boxModelWrapper.classList.add("show");
 }
 
-// Events
-boxModelCloseBtn.addEventListener("click", closeBoxModel);
-boxModelButtons.forEach((btn) => {
-  btn.addEventListener("click", closeBoxModel);
-});
+
