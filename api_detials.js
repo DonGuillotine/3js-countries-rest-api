@@ -8,3 +8,9 @@ byFields = `?fields=flag,name,nativeName,population,region,subregion,capital,top
 
 
 // Country Details HTML Structure
+
+function countryDetailsStructure(data) {
+    return `
+      <div class="country-flag">
+        <img src=${data.flag} alt="${data.flag} Flag" />
+      </div>
