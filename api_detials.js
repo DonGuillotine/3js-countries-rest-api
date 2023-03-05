@@ -118,4 +118,10 @@ async function getCountryDetails() {
           // console.log(response);
           let data = await response.json();
           // console.log(data);
-      
+          if (response.status == 404) {
+            notifications(
+              detailsGrid,
+              (message = `Sorry, country ${data.message}...`),
+              (details = "Please check spelling and try again")
+            );
+          }
