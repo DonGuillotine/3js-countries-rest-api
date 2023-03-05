@@ -36,3 +36,6 @@ function countryDetailsStructure(data) {
                 .map((lang) => lang.name)
                 .join(", ")}</li>
             </ul>
+            </div>
+      </div>
+      <div class="col col-3">
