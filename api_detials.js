@@ -14,3 +14,9 @@ function countryDetailsStructure(data) {
       <div class="country-flag">
         <img src=${data.flag} alt="${data.flag} Flag" />
       </div>
+      <div class="country-info">
+      <div class="col col-1">
+        <h1 class="country-title">${data.name}</h1>
+      </div>
+      <div class="col col-2">
+        <div class="col col-1">
