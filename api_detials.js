@@ -67,3 +67,9 @@ function countryDetailsStructure(data) {
 }
 
 // Get Country Details
+async function getCountryDetails() {
+    let sessionValue = sessionStorage.getItem("id");
+    try {
+      let response = await fetch(
+        `${baseApiLink}${byName}${sessionValue}${byFields}&fullText=true`
+      );
