@@ -84,3 +84,18 @@ async function getCountryDetails() {
         (details = "Please check spelling and try again")
       );
     }
+    else {
+        if (data) {
+          controlLoader("open"); // Open
+          detailsGrid.classList.remove("no-grid", "no-flex");
+          detailsGrid.innerHTML = "";
+          data.forEach((country) => {
+            detailsGrid.innerHTML += countryDetailsStructure(country);
+          });
+          borderCountries = document.querySelectorAll(".col-3 li");
+          controlLoader(); // Close
+        } else {
+          notifications(detailsGrid);
+        }
+      }
+    }
