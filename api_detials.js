@@ -27,3 +27,12 @@ function countryDetailsStructure(data) {
             <li><strong>sub region: </strong> ${data.subregion}</li>
             <li><strong>capital: </strong> ${data.capital}</li>
           </ul>
+          </div>
+          <div class="col col-2">
+            <ul>
+              <li><strong>top level domain: </strong> ${data.topLevelDomain}</li>
+              <li><strong>currencies: </strong> ${data.currencies[0].name}</li>
+              <li><strong>languages: </strong> ${data.languages
+                .map((lang) => lang.name)
+                .join(", ")}</li>
+            </ul>
