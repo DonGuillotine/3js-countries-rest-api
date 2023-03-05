@@ -20,3 +20,10 @@ function countryDetailsStructure(data) {
       </div>
       <div class="col col-2">
         <div class="col col-1">
+        <ul>
+            <li><strong>native name: </strong> ${data.nativeName}</li>
+            <li><strong>population: </strong> ${data.population}</li>
+            <li><strong>region: </strong> ${data.region}</li>
+            <li><strong>sub region: </strong> ${data.subregion}</li>
+            <li><strong>capital: </strong> ${data.capital}</li>
+          </ul>
