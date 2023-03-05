@@ -59,3 +59,9 @@ function countryDetailsStructure(data) {
             )
             .join("")}
         </ul>
+        `}`
+    }      
+    </div>
+  </div>
+      `;
+}
