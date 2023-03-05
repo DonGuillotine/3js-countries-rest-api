@@ -112,3 +112,10 @@ async function getCountryDetails() {
     
 
     // Get Border Countries Details
+    async function getBorderDetails(value) {
+        try {
+          let response = await fetch(`${baseApiLink}${byAlpha}${value}${byFields}`);
+          // console.log(response);
+          let data = await response.json();
+          // console.log(data);
+      
