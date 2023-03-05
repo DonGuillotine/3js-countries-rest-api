@@ -125,3 +125,14 @@ async function getCountryDetails() {
               (details = "Please check spelling and try again")
             );
           }
+          else {
+            if (data) {
+              controlLoader("open"); // Open
+              detailsGrid.classList.remove("no-grid", "no-flex");
+              detailsGrid.innerHTML = "";
+              detailsGrid.innerHTML += countryDetailsStructure(data);
+              controlLoader(); // Close
+            } else {
+              notifications(detailsGrid);
+            }
+          }
