@@ -108,3 +108,4 @@ async function getCountryDetails() {
         );
       }
     }
+    getCountryDetails();
