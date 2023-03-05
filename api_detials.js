@@ -140,13 +140,13 @@ async function getCountryDetails() {
             //   console.error(error);
             notifications(
               detailsGrid,
-              (message = "Sorry something went wrong..."),
+              (message = "Sorry something went wrong"),
               error
             );
           }
         }
 
-        
+
         function moreDetails(el) {
             controlLoader("open"); // Open
             let countryName = el.dataset.border.toLocaleLowerCase().trim();
