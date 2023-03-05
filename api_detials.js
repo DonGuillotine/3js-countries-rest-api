@@ -5,3 +5,6 @@ byFields = `?fields=flag,name,nativeName,population,region,subregion,capital,top
 /*
     FUNCTIONS
 */
+
+
+// Country Details HTML Structure
