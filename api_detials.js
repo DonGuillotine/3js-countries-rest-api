@@ -39,3 +39,7 @@ function countryDetailsStructure(data) {
             </div>
       </div>
       <div class="col col-3">
+      ${
+        data.borders == undefined
+          ? "<strong class='warning'>no borders for this country...!</strong>"
+          : `<strong> border countries:</strong> ${`
