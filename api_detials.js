@@ -145,3 +145,10 @@ async function getCountryDetails() {
             );
           }
         }
+
+        
+        function moreDetails(el) {
+            controlLoader("open"); // Open
+            let countryName = el.dataset.border.toLocaleLowerCase().trim();
+            getBorderDetails(countryName);
+          }
