@@ -65,3 +65,5 @@ function countryDetailsStructure(data) {
   </div>
       `;
 }
+
+// Get Country Details
