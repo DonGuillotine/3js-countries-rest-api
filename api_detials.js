@@ -43,3 +43,19 @@ function countryDetailsStructure(data) {
         data.borders == undefined
           ? "<strong class='warning'>no borders for this country...!</strong>"
           : `<strong> border countries:</strong> ${`
+          <ul>
+          ${data.borders
+            .map(
+              (border) => `
+              <li data-border=${border} onclick="moreDetails(this)">
+              <button
+                type="button"
+                class="button btn"
+                data-country-name="${data.name}"
+              >
+              ${border}
+              </button>
+            </li>`
+            )
+            .join("")}
+        </ul>
