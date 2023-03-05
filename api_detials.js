@@ -99,3 +99,12 @@ async function getCountryDetails() {
         }
       }
     }
+    catch (error) {
+        //   console.error(error);
+        notifications(
+          detailsGrid,
+          (message = "Sorry something went wrong..."),
+          error
+        );
+      }
+    }
