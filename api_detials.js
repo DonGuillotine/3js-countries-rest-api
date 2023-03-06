@@ -140,7 +140,7 @@ async function getCountryDetails() {
             //   console.error(error);
             notifications(
               detailsGrid,
-              (message = "Sorry something went wrong"),
+              (message = "Sorry something went wrong..."),
               error
             );
           }
