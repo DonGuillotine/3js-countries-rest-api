@@ -1,4 +1,4 @@
-const baseApiLink = `https://restcountries.com/v2/`,
+const baseApiLink = `https://restcountries.com/v3.1/`,
   all = "all",
   byRegion = `region/`,
   byName = `name/`,
@@ -10,13 +10,13 @@ let byFields = `?fields=name,population,region,capital,flags`,
 // Country Card HTML Structure
 function countryStructure(data) {
     return `
-    <div class="mx-auto max-w-sm bg-transparent border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
-        <a href="#" data-country-name="${data.name}">
-            <img class="rounded-t-lg opacity-20" src=${data.flags.svg} alt="${data.name} FLag" />
+    <div class="mx-auto max-w-sm bg-transparent border-gray-200 rounded-lg shadow-xl mb-10 dark:bg-gray-800 dark:border-gray-700">
+        <a href="#" data-country-name="${data.name.common}">
+            <img class="rounded-t-lg opacity-20" src=${data.flags.svg} alt="${data.name.common} FLag" />
         </a>
         <div class="p-5">
             <a href="#">
-                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">${data.name}</h5>
+                <h5 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-white">${data.name.common}</h5>
             </a>
             <ul class="max-w-md text-white space-y-1 list-disc list-inside dark:text-gray-400">
                 <li><strong>population: </strong>${data.population}</li>
@@ -35,7 +35,7 @@ async function getCountries(query, limit = 50, getRest = false) {
       let response = await fetch(url, { cache: "force-cache" });
       // console.log(response);
       let data = await response.json();
-      // console.log(data);
+      console.log(data);
       limit ? (data.length = limit) : "";
       getRest ? (data.length = data.splice(0, 50).length) : "";
   
