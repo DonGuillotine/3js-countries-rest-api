@@ -4,16 +4,7 @@ const baseApiLink = `https://restcountries.com/v3.1/`,
   byName = `name/`,
   byAlpha = `alpha/`;
 let byFields = `?fields=name,population,region,capital,flags`,
-  countriesGrid = document.querySelector(".countries-grid"),
-  dropDownHeader = document.querySelector(".dropdown-header"),
-  dropDownBodyOptions = document.querySelectorAll(".dropdown-body li"),
-  searchInput = document.querySelector(".search-input"),
-  scrollBtn = document.querySelector(".scroll-top"),
-  showMoreButton = document.querySelector(".show-more-btn"),
-  switchBtn = document.querySelector(".theme-toggle"),
-  switchBtnText = switchBtn.querySelector(".theme-text"),
-  switchBtnIcon = switchBtn.querySelector(".theme-icon"),
-  theme = "light";
+  countriesGrid = document.querySelector(".countries-grid");
 
 
 // Country Card HTML Structure
@@ -50,33 +41,35 @@ async function getCountries(query, limit = 50, getRest = false) {
   
       if (response.status >= 200 && response.status < 300) {
         if (data) {
-          controlLoader("open"); // Open
-          countriesGrid.classList.remove("no-grid", "no-flex");
+        //   controlLoader("open"); // Open
+        //   countriesGrid.classList.remove("no-grid", "no-flex");
           limit == null ? (countriesGrid.innerHTML = "") : "";
   
           data.forEach((country) => {
             countriesGrid.innerHTML += countryStructure(country);
           });
-          let countries = countriesGrid.querySelectorAll(".country");
-          seeFullProject(countries);
-  
-          controlLoader(); // Close
+        //   let countries = countriesGrid.querySelectorAll(".country");
+        //   seeFullProject(countries);
+        // Close
+        //   controlLoader(); 
         } else {
-          notifications(countriesGrid);
+            console.log("Error");
+        //   notifications(countriesGrid);
         }
       } else {
-        notifications(
-          countriesGrid,
-          (message = `Sorry, country ${data.message}...`),
-          (details = "Please check spelling and try again")
-        );
+        // notifications(
+        //   countriesGrid,
+        //   (message = `Sorry, country ${data.message}...`),
+        //   (details = "Please check spelling and try again")
+        // );
+        console.log("Error");
       }
     } catch (error) {
-      //   console.error(error);
-      notifications(
-        countriesGrid,
-        (message = "Sorry something went wrong..."),
-        error
-      );
+        console.error(error);
+    //   notifications(
+    //     countriesGrid,
+    //     (message = "Sorry something went wrong..."),
+    //     error
+    //   );
     }
   }
