@@ -12,7 +12,7 @@ function countryStructure(data) {
     return `
     <div class="mx-auto max-w-sm bg-transparent border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
         <a href="#" data-country-name="${data.name}">
-            <img class="rounded-t-lg " src=${data.flags.svg} alt="${data.name} FLag" />
+            <img class="rounded-t-lg opacity-20" src=${data.flags.svg} alt="${data.name} FLag" />
         </a>
         <div class="p-5">
             <a href="#">
