@@ -1,3 +1,21 @@
+const baseApiLink = `https://restcountries.com/v3.1/`,
+  all = "all",
+  byRegion = `region/`,
+  byName = `name/`,
+  byAlpha = `alpha/`;
+let byFields = `?fields=name,population,region,capital,flags`,
+  countriesGrid = document.querySelector(".countries-grid"),
+  dropDownHeader = document.querySelector(".dropdown-header"),
+  dropDownBodyOptions = document.querySelectorAll(".dropdown-body li"),
+  searchInput = document.querySelector(".search-input"),
+  scrollBtn = document.querySelector(".scroll-top"),
+  showMoreButton = document.querySelector(".show-more-btn"),
+  switchBtn = document.querySelector(".theme-toggle"),
+  switchBtnText = switchBtn.querySelector(".theme-text"),
+  switchBtnIcon = switchBtn.querySelector(".theme-icon"),
+  theme = "light";
+
+
 // Country Card HTML Structure
 function countryStructure(data) {
     return `
