@@ -18,3 +18,47 @@ function countryStructure(data) {
     </div>
         `;
   }
+
+// Get All Countries
+async function getCountries(query, limit = 50, getRest = false) {
+    let url = `${baseApiLink}${query}`;
+    try {
+      let response = await fetch(url, { cache: "force-cache" });
+      // console.log(response);
+      let data = await response.json();
+      // console.log(data);
+      limit ? (data.length = limit) : "";
+      getRest ? (data.length = data.splice(0, 50).length) : "";
+  
+      if (response.status >= 200 && response.status < 300) {
+        if (data) {
+          controlLoader("open"); // Open
+          countriesGrid.classList.remove("no-grid", "no-flex");
+          limit == null ? (countriesGrid.innerHTML = "") : "";
+  
+          data.forEach((country) => {
+            countriesGrid.innerHTML += countryStructure(country);
+          });
+          let countries = countriesGrid.querySelectorAll(".country");
+          seeFullProject(countries);
+  
+          controlLoader(); // Close
+        } else {
+          notifications(countriesGrid);
+        }
+      } else {
+        notifications(
+          countriesGrid,
+          (message = `Sorry, country ${data.message}...`),
+          (details = "Please check spelling and try again")
+        );
+      }
+    } catch (error) {
+      //   console.error(error);
+      notifications(
+        countriesGrid,
+        (message = "Sorry something went wrong..."),
+        error
+      );
+    }
+  }
