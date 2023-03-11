@@ -88,6 +88,6 @@ function getCountriesBySearch() {
   } else {
     countriesGrid.innerHTML = "";
     getCountries(`${byName}${searchInputValue}${byFields}`);
-    showMoreButton.style.display = "none";
+    // showMoreButton.style.display = "none";
   }
 }
