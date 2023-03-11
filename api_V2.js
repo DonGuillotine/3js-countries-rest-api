@@ -93,6 +93,17 @@ function getCountriesBySearch() {
   }
 }
 
+// Get Countries by Region
+function getCountriesByRegion(region){
+  if(region == "all"){
+    countriesGrid.innerHTML = "";
+    getCountries(`${all}${byFields}`);
+  }else{
+    countriesGrid.innerHTML = "";
+    getCountries(`${byName}${region}${byFields}`);
+  }
+}
+
 // Event Listeners
 
 // For Search
