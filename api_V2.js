@@ -4,8 +4,9 @@ const baseApiLink = `https://restcountries.com/v3.1/`,
   byName = `name/`,
   byAlpha = `alpha/`;
 let byFields = `?fields=name,population,region,capital,flags`,
-  countriesGrid = document.querySelector(".countries-grid");
-  searchInput = document.querySelector(".search-input")
+  countriesGrid = document.querySelector(".countries-grid"),
+  searchInput = document.querySelector(".search-input"),
+  dropDownBody = document.querySelectorAll(".dropDownBody li")
 
 
 // Country Card HTML Structure
