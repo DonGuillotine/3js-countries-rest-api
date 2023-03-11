@@ -91,3 +91,8 @@ function getCountriesBySearch() {
     // showMoreButton.style.display = "none";
   }
 }
+
+// Event Listeners
+
+// For Search
+searchInput.addEventListener("keyup", getCountriesBySearch);
