@@ -96,3 +96,4 @@ function getCountriesBySearch() {
 
 // For Search
 searchInput.addEventListener("keyup", getCountriesBySearch);
+searchInput.addEventListener("paste", getCountriesBySearch);
