@@ -5,6 +5,7 @@ const baseApiLink = `https://restcountries.com/v3.1/`,
   byAlpha = `alpha/`;
 let byFields = `?fields=name,population,region,capital,flags`,
   countriesGrid = document.querySelector(".countries-grid");
+  searchInput = document.querySelector(".search-input")
 
 
 // Country Card HTML Structure
@@ -83,7 +84,7 @@ function getCountriesBySearch() {
   if (searchInputValue == "" || searchInputValue.length == 0) {
     countriesGrid.innerHTML = "";
     getCountries(`${all}${byFields}`);
-    showMoreButton.style.display = "block";
+    // showMoreButton.style.display = "block";
   } else {
     countriesGrid.innerHTML = "";
     getCountries(`${byName}${searchInputValue}${byFields}`);
