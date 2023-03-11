@@ -75,3 +75,18 @@ async function getCountries(query, limit = 50, getRest = false) {
   }
 
   getCountries(`${all}${byFields}`);
+
+
+  // Get Countries By Search
+function getCountriesBySearch() {
+  let searchInputValue = searchInput.value.trim().toLowerCase();
+  if (searchInputValue == "" || searchInputValue.length == 0) {
+    countriesGrid.innerHTML = "";
+    getCountries(`${all}${byFields}`);
+    showMoreButton.style.display = "block";
+  } else {
+    countriesGrid.innerHTML = "";
+    getCountries(`${byName}${searchInputValue}${byFields}`);
+    showMoreButton.style.display = "none";
+  }
+}
