@@ -111,7 +111,9 @@ searchInput.addEventListener("keyup", getCountriesBySearch);
 searchInput.addEventListener("paste", getCountriesBySearch);
 
 // For Filtering
-// dropDownBody.forEach((links)=>{
-//   let userRegion = links.dataset.region.toLowerCase();
-//   links.addEventListener("click", getCountriesByRegion(userRegion))
-// })
+dropDownBody.forEach((links)=>{
+  links.addEventListener("click", ()=>{
+    let userRegion = links.dataset.region.toLowerCase();
+    getCountriesByRegion(userRegion);
+  })
+})
