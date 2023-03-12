@@ -64,9 +64,9 @@ function setTintColor() {
 //----------------------------------------------------------------- CREATE City
 
 function init() {
-  var segments = 2;
+  var segments = 20;
   for (var i = 1; i<100; i++) {
-    var geometry = new THREE.CubeGeometry(1,0,0,segments,segments,segments);
+    var geometry = new THREE.SphereGeometry(0,0,0,segments,segments,segments);
     var material = new THREE.MeshStandardMaterial({
       color:setTintColor(),
       wireframe:false,
