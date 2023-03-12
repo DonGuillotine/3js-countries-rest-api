@@ -109,3 +109,8 @@ function getCountriesByRegion(region){
 // For Search
 searchInput.addEventListener("keyup", getCountriesBySearch);
 searchInput.addEventListener("paste", getCountriesBySearch);
+
+// For Filtering
+dropDownBody.forEach((links)=>{
+  links.addEventListener("click", )
+})
