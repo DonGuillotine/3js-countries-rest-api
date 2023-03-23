@@ -21,7 +21,13 @@ body {
     opacity: 0.6;
   }
 
- 
+  :root {
+    --dur: 2s;
+    --bg: #004dff;
+    --fg: #17181c;
+    font-size: calc(12px + (24 - 12) * (100vw - 320px) / (2560 - 320));
+  }
+  
   .preloader,
   .box,
   .box__inner,
