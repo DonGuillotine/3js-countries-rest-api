@@ -27,6 +27,9 @@ body {
     --fg: #17181c;
     font-size: calc(12px + (24 - 12) * (100vw - 320px) / (2560 - 320));
   }
+  .preloader{
+    background-color: #000;
+  }
   
   .preloader,
   .box,
