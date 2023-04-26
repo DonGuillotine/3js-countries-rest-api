@@ -122,6 +122,6 @@ dropDownBody.forEach((links)=>{
 // Scroll Top
 function scrollTop() {
   window.scrollTo({
-   
+    top: 0,
   });
 }
