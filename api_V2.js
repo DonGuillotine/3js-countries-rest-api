@@ -117,3 +117,11 @@ dropDownBody.forEach((links)=>{
     getCountriesByRegion(userRegion);
   })
 })
+
+
+// Scroll Top
+function scrollTop() {
+  window.scrollTo({
+   
+  });
+}
