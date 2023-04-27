@@ -10,7 +10,7 @@ let byFields = `?fields=name,population,region,capital,flags`,
 
 
 // Error Messgaes
-function notifications() {
+function notifications(target) {
 }  
 
 
