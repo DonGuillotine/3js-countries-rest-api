@@ -10,7 +10,7 @@ let byFields = `?fields=name,population,region,capital,flags`,
 
 
 // Error Messgaes
-function notifications(target) {
+function notifications(target, message = "Sorry, something went wrong",) {
 }  
 
 
