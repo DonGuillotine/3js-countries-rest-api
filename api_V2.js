@@ -11,6 +11,7 @@ let byFields = `?fields=name,population,region,capital,flags`,
 
 // Error Messgaes
 function notifications(target, message = "Sorry, something went wrong", details = "Please try again later") {
+  target.innerHTML = `<div class="notifi-wrapper"><h2>${message}</h2><p>${details}</p></div>`;
 }  
 
 
