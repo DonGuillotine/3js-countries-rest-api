@@ -9,6 +9,11 @@ let byFields = `?fields=name,population,region,capital,flags`,
   dropDownBody = document.querySelectorAll(".dropDownBody li")
 
 
+// Error Messgaes
+function notifications() {
+}  
+
+
 // Country Card HTML Structure
 function countryStructure(data) {
     return `
